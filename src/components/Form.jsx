@@ -10,11 +10,11 @@ function Form() {
     <div>
         <h1>{value.turma + value.numero}</h1>
         <label htmlFor="nome">Nome</label>
-        // estamos passando um evento de onChange que recebe uma callback e dentro dela a função de atualização de um state para declarar o que queremos e conectar com o input em questão. (Lembra do addEventListener? compara só)
+     {/* estamos passando um evento de onChange que recebe uma callback e dentro dela a função de atualização de um state para declarar o que queremos e conectar com o input em questão. (Lembra do addEventListener? compara só) */}
         <input type="text" id='nome' value={valueInput} onChange={(event) => setValueInput(event.target.value)} />
         <label htmlFor="email">E-mail</label>
         <input type="text" id='email'/>
-        // estamos fazendo o mesmo acima, a única diferença é controlar a mudança do state pelo tipo de evento declarado.
+        {/* // estamos fazendo o mesmo acima, a única diferença é controlar a mudança do state pelo tipo de evento declarado. */}
         <Button text="Enviar" color="red" click={(event) => {setValue(event.target.value = "turma 14")}}/>
     </div>
   )

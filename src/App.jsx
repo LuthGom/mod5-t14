@@ -19,7 +19,9 @@ function App() {
       <h1>Olá, {auth}</h1>
       <BrowserRouter>
         {/* um componente do router que já vem, feito a partir de uma tag <a> com atributo href para direcionar para outro componente no click, desde que a rota seja passada. */}
-        <Link to="/form">Form</Link> <Link to="/pokedex">Pokedex</Link>
+        <Link to="/form">Form</Link> {' '}
+        <Link to="/pokedex">Pokedex</Link>{' '}
+        <Link to="/buscaPokemon">Busca Pokemon</Link>
         {/* componente que engloba todos as rotas devidamente declaradas. */}
         <Routes>
           {/*  componente usado para declarar rotas seguindo a sintaxe. */}

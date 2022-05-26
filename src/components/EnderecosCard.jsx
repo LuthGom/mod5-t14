@@ -1,5 +1,5 @@
 import React from "react";
-
+// um componente que foi criado pensando exatamente no retorno da api ViaCep, onde fazemos a requisição no BuscaCep.jsx.
 export default function EnderecosCard({
   localidade,
   uf,
@@ -7,10 +7,10 @@ export default function EnderecosCard({
   bairro,
   complemento,
   cep,
-  indice
+  indice,
 }) {
   return (
-    <div >
+    <div>
       <h3>{indice}</h3>
       <h1>{`Localidade: ${localidade} - ${uf}`}</h1>
       <p>{`Logradouro: ${logradouro} `}</p>

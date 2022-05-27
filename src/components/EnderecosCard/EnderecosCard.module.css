@@ -1,0 +1,8 @@
+.container{
+    width: fit-content;
+    border: 1px solid black;
+    margin: 1em;
+    background-image: url(https://doutormultas.com.br/wp-content/uploads/2019/05/entregas-rapidas-935x614.jpg);
+    font-weight: bold;
+    padding: 1em;
+}

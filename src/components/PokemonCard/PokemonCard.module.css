@@ -1,0 +1,15 @@
+.container{
+    margin: 1em;
+    border: 1px solid rebeccapurple;
+    padding: 1em;
+}
+.container h1 {
+    color: brown;
+}
+.container a{
+    text-decoration: none;
+    color: blue;
+}
+.container a:hover{
+    color: green;
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import EnderecosCard from "../../components/EnderecosCard/EnderecosCard";
 import { viaCepApi } from "../../services/Api";
+// aqui estamos importando/instanciando uma variável styles para o arquivo de css module para conseguirmos extrair as estilizações.
 import styles from "./BuscaCep.module.css";
 export default function BuscaCep() {
   // criando um state para manipular o valor do input e passar como parametro para a api.
@@ -9,6 +10,7 @@ export default function BuscaCep() {
   // criando um state que rebece o json de retorno da requisição à API.
   const [endereco, setEndereco] = useState([]);
   //   console.log("list", lista);
+  // criamos um outro state para armazenar todos os endereços pesquisados e rendezirar num histórico mockado.
   const [lista, setLista] = useState([]);
   //   console.log(value);
   //   console.log(endereco);
@@ -19,6 +21,7 @@ export default function BuscaCep() {
       .then((data) => {
         // estamos passamos o retorno da api para o state endereco. Veja bem: Estamos colocando o retorno data entre colchetes para ja ser passado como um array ao state e podermos manipular com os métodos de array.
         setEndereco([data]);
+        // aqui, estamos espalhando todos os valores recebidos pelo state lista e dizendo que ele está apto a receber quantos valores vierem do retorno data.
         setLista([...lista, data]);
       })
       .catch((err) => {
@@ -48,6 +51,7 @@ export default function BuscaCep() {
           display: endereco.length < 1 ? "none" : "flex",
           flexDirection: "column",
         }}
+        // como declaramos classes vindas de css module: className={variavel styles.nomeDaClasse do arquivo .module.css}
         className={styles.pesquisaContainer}
       >
         <h2>Resultado da pesquisa:</h2>
@@ -71,6 +75,7 @@ export default function BuscaCep() {
           style={{ display: lista.length < 1 ? "none" : "flex" }}
           className={styles.historicoContainer}
         >
+          {/* aqui estamos mapeando todos os itens armazenados no state lista, de forma mockada, e renderizando na tela. */}
           <h3>Histórico de pesquisa:</h3>
           {lista.map((endereco, index) => {
             return (

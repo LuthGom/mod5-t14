@@ -1,0 +1,13 @@
+.pesquisaContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.historicoContainer {
+  display: flex;
+  height: fit-content;
+}
+.historicoContainer p {
+  font-size: 10px;
+}

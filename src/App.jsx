@@ -8,6 +8,7 @@ import { UserContext } from "./context/UserProvider";
 import Pokedex from "./pages/Pokedex/Pokedex";
 import BuscaPokemon from "./pages/BuscaPokemon/BuscaPokemon";
 import BuscaCep from "./pages/BuscaCep/BuscaCep";
+import Apod from "./pages/Apod/Apod";
 function App() {
   // aqui, estamos desestruturando o dado que queremos do contexto. A sintaxe significa: o dado que queremos sendo instanciado/desestruturado (nesse caso o state auth) = ao hook useContext que recebe no ()  contexto que queremos utilizar.
   const { auth } = useContext(UserContext);
@@ -21,7 +22,8 @@ function App() {
         {/* um componente do router que já vem, feito a partir de uma tag <a> com atributo href para direcionar para outro componente no click, desde que a rota seja passada. */}
         <Link to="/form">Form</Link> <Link to="/pokedex">Pokedex</Link>{" "}
         <Link to="/buscaPokemon">Busca Pokemon</Link>{" "}
-        <Link to="/buscaCep">Busca Cep</Link>
+        <Link to="/buscaCep">Busca Cep</Link>{" "}
+        <Link to="/apod">Apod</Link>
         {/* componente que engloba todos as rotas devidamente declaradas. */}
         <Routes>
           {/*  componente usado para declarar rotas seguindo a sintaxe. */}
@@ -29,6 +31,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/buscaPokemon" element={<BuscaPokemon />} />
           <Route path="/buscaCep" element={<BuscaCep />} />
+          <Route path="/apod" element={<Apod />} />
           {/* <Route path="/teste" element={<Button />} /> */}
         </Routes>
       </BrowserRouter>
